@@ -1,0 +1,20 @@
+When do you use add and commit respectively?
+    I use add when I've finished editing and commit when I'm sure those edits are the last thing that I'm doing and I'm ready to push them
+What is pull or push?
+    Push is committing edits to the remote directory from the local directory and pull is updating the local repository from the remote repo.
+When do you use log and status, respectively?
+    git-log shows me the commits that I've done and status shows me where I'm at in the branch I'm currently working on in respect to what I've added and deleted and whether or not commits have been made.
+How can you formulate yourself in your commit messages?
+    Your commit message should explicitly summerize the changes you've made to the file you're committing
+What ways can you roll back code and why would you choose to use each type?
+    Before Staging:
+        git checkout -- <file> : overwrite local changes, discard changes
+        git stash: save local changes for use later if you need to change branches or change something else first
+        git reset --hard: discard local changes permanently
+    After Staging:
+        git restore --staged <file> : to unstage the file but keep the changes
+        git reset: unstage all but keep the changes
+        git reset HEAD <file> : unstage the file to the current commit
+    After Pushing
+        git reset <SHA> makes a new commit that reverses the old one (so you can keep track of all changes made instead of deleting stuff)
+
